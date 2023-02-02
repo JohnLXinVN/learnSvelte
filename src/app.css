@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navItem {
+    @apply mr-8 cursor-pointer h-full flex items-center
+}
+
+.activeNavHover {
+
+}
+
+.activeNav {
+    @apply text-primary relative before:absolute before:h-[3px] before:bottom-0 before:w-full before:bg-primary before:rounded-sm
+}
