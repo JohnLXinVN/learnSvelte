@@ -3,13 +3,20 @@
 @tailwind utilities;
 
 .navItem {
-    @apply mr-8 cursor-pointer h-full flex items-center
+    @apply mr-8 cursor-pointer h-full flex items-center;
 }
 
 .activeNavHover {
-
 }
 
 .activeNav {
-    @apply text-primary relative before:absolute before:h-[3px] before:bottom-0 before:w-full before:bg-primary before:rounded-sm
+    @apply text-primary relative before:absolute before:h-[3px] before:bottom-0 before:w-full before:bg-primary before:rounded-sm;
+}
+
+.btn {
+    @apply text-white text-lg font-bold rounded-3xl;
+}
+
+.btn-prymary {
+    @apply bg-primary text-white text-lg font-bold rounded-3xl;
 }
