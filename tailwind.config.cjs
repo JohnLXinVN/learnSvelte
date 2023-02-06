@@ -17,7 +17,7 @@ module.exports = {
                 '4.5xl': '40px',
             },
             content: {
-                imgGift: 'url("./src/lib/assets/66834_1IconGift.png")',
+                imgGift: 'url("./src/lib/assets/Image/66834_1IconGift.png")',
             },
             animation: {
                 scale: 'scale 1.5s linear infinite',

@@ -1,0 +1,42 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('./lib/assets/Fonts/Montserrat-Thin.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('./lib/assets/Fonts/Montserrat-Medium.ttf');
+    font-weight: 600;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url('./lib/assets/Fonts/Montserrat-SemiBold.ttf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url('./lib/assets/Fonts/Montserrat-Bold.ttf');
+    font-weight: 700;
+}
+
+.select-feature {
+    background-image: linear-gradient(
+        to left,
+        rgb(239, 244, 246) 60%,
+        rgb(0, 84, 120) 40%
+    );
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+}

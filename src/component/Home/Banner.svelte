@@ -1,9 +1,4 @@
 <script>
-    import banner1 from '$lib/assets/Mask_groupBanner1.png';
-    import banner2 from '$lib/assets/Mask_groupBanner2.png';
-    import banner3 from '$lib/assets/Mask_groupBanner3.png';
-    import iconGift from '$lib/assets/66834_1IconGift.png';
-
     // import Swiper core and required modules
     import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 
@@ -31,7 +26,7 @@
     >
         <SwiperSlide class="w-full">
             <div
-                class="bg-[url('src/lib/assets/Mask_groupBanner1.png')] h-[560px] bg-no-repeat flex flex-col items-center justify-center"
+                class="bg-[url('src/lib/assets/Image/Mask_groupBanner1.png')] h-[560px] bg-no-repeat flex flex-col items-center justify-center"
             >
                 <div class="items-center flex flex-col">
                     <h2 class="text-4.5xl font-bold text-yellow-400 ">
@@ -51,9 +46,11 @@
         </SwiperSlide>
         <SwiperSlide class="w-full">
             <div
-                class="bg-[url('src/lib/assets/Mask_groupBanner2.png')] h-[560px] bg-no-repeat object-cover"
+                class="bg-[url('src/lib/assets/Image/Mask_groupBanner2.png')] h-[560px] bg-no-repeat object-cover"
             >
-                <div class="max-w-screen-lg mx-auto flex flex-col justify-center h-full ">
+                <div
+                    class="max-w-screen-lg mx-auto px-4 flex flex-col justify-center h-full "
+                >
                     <div class="flex items-center ">
                         <div
                             class="text-[55px] text-primary font-bold bottom-0 flex items-center relative"
@@ -79,9 +76,11 @@
         </SwiperSlide>
         <SwiperSlide class="w-full">
             <div
-                class="bg-[url('src/lib/assets/Mask_groupBanner3.png')] h-[560px] bg-no-repeat object-cover"
+                class="bg-[url('src/lib/assets/Image/Mask_groupBanner3.png')] h-[560px] bg-no-repeat object-cover"
             >
-                <div class="max-w-screen-lg mx-auto flex flex-col justify-center h-full">
+                <div
+                    class="max-w-screen-lg mx-auto px-4 flex flex-col justify-center h-full"
+                >
                     <div class="relative flex items-center">
                         <div
                             class="font-bold text-lg flex items-center justify-center p-2 w-fit bg-green-500 text-white rounded-full absolute left-0 top-0 "

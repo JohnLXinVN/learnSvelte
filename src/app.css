@@ -20,3 +20,11 @@
 .btn-prymary {
     @apply bg-primary text-white text-lg font-bold rounded-3xl;
 }
+
+.activeItemNavSelectFeature {
+    @apply rounded-md bg-primary;
+}
+
+.activeItemNavSelectFeatureIcon {
+    @apply text-white;
+}

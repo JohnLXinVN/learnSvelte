@@ -1,5 +1,5 @@
 <script>
-    import srcLogo from '$lib/assets/avatar_XSpa.png';
+    import srcLogo from '$lib/assets/Image/avatar_XSpa.png';
 </script>
 
 <section>
