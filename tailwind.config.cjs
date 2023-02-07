@@ -8,7 +8,7 @@ module.exports = {
             },
             colors: {
                 primary: '#00AFC7',
-                base: '#141416',
+                textColor: '#141416',
                 yellow: {
                     650: '#EE8300',
                 },

@@ -22,7 +22,11 @@
 }
 
 .activeItemNavSelectFeature {
-    @apply rounded-md bg-primary;
+    @apply bg-primary text-white;
+}
+
+.activeItemNavHover {
+    @apply hover:bg-primary hover:!text-white transition-all duration-200;
 }
 
 .activeItemNavSelectFeatureIcon {

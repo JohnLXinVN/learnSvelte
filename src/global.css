@@ -1,5 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
+    color: #141416;
 }
 
 @font-face {
@@ -25,11 +26,7 @@ body {
 }
 
 .select-feature {
-    background-image: linear-gradient(
-        to left,
-        rgb(239, 244, 246) 60%,
-        rgb(0, 84, 120) 40%
-    );
+    background-image: linear-gradient(to left, rgb(239, 244, 246) 60%, rgb(0, 84, 120) 40%);
     background-position-x: initial;
     background-position-y: initial;
     background-size: initial;
