@@ -18,6 +18,9 @@
     import WhyUsIcon2 from '$lib/assets/Image/3094806Whyusicon2.png';
     import WhyUsIcon3 from '$lib/assets/Image/4252491Whyusicon3.png';
     import WhyUsIcon4 from '$lib/assets/Image/4230869Whyusicon4.png';
+    import imgBlog1 from '$lib/assets/Image/Rectangle88blog1.png';
+    import imgBlog2 from '$lib/assets/Image/Rectangle94blog2.png';
+    import imgBlog3 from '$lib/assets/Image/Rectangle95blog3.png';
 
     let activeFeatureOn;
     activeFeature.subscribe((value) => {
@@ -455,8 +458,76 @@
     <!-- EndWhyUs -->
 
     <!-- Begin Blog -->
-    <div class="max-w-screen-lg mx-auto px-4 mt-14">
+    <div class="max-w-screen-lg mx-auto px-4 my-14">
         <h1 class="mb-7 font-bold text-3xl">Blog</h1>
+        <div class="grid grid-cols-3 gap-8">
+            <a href="/">
+                <div class="relative">
+                    <div class="overflow-hidden rounded-xl">
+                        <img src={imgBlog1} alt="" class="hover:scale-[1.3] transition-all" />
+                    </div>
+                    <div class="absolute bg-[#005478] rounded text-white top-3 right-3 flex flex-col py-1 px-2">
+                        <span class="font-semibold text-sm">16.10</span>
+                        <span class="font-semibold text-sm">2022</span>
+                    </div>
+                </div>
+                <h1 class="my-4 w-fit py-1 px-4 bg-[#D6F2F5] text-primary rounded-[200px] font-bold text-sm">
+                    Tên chuyên mục
+                </h1>
+                <h2 class="font-bold text-lg">
+                    Beautyhub đang thúc đẩy hoạt động kinh doanh của House of Gloss như thế nào
+                </h2>
+                <h3 class="mt-4 font-semibold text-sm text-gray-400">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet dolore magna aliquam erat volutpat.
+                </h3>
+            </a>
+            <a href="/">
+                <div class="relative">
+                    <div class="overflow-hidden rounded-xl">
+                        <img src={imgBlog2} alt="" class="hover:scale-[1.3] transition-all" />
+                    </div>
+                    <div class="absolute bg-[#005478] rounded text-white top-3 right-3 flex flex-col py-1 px-2">
+                        <span class="font-semibold text-sm">16.10</span>
+                        <span class="font-semibold text-sm">2022</span>
+                    </div>
+                </div>
+                <h1 class="my-4 w-fit py-1 px-4 bg-[#D6F2F5] text-primary rounded-[200px] font-bold text-sm">
+                    Tên chuyên mục
+                </h1>
+                <h2 class="font-bold text-lg">
+                    Beautyhub đang thúc đẩy hoạt động kinh doanh của House of Gloss như thế nào
+                </h2>
+                <h3 class="mt-4 font-semibold text-sm text-gray-400">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet dolore magna aliquam erat volutpat.
+                </h3>
+            </a>
+            <a href="/">
+                <div class="relative">
+                    <div class="overflow-hidden rounded-xl">
+                        <img src={imgBlog3} alt="" class="hover:scale-[1.3] transition-all" />
+                    </div>
+                    <div class="absolute bg-[#005478] rounded text-white top-3 right-3 flex flex-col py-1 px-2">
+                        <span class="font-semibold text-sm">16.10</span>
+                        <span class="font-semibold text-sm">2022</span>
+                    </div>
+                </div>
+                <h1 class="my-4 w-fit py-1 px-4 bg-[#D6F2F5] text-primary rounded-[200px] font-bold text-sm">
+                    Tên chuyên mục
+                </h1>
+                <h2 class="font-bold text-lg">
+                    Beautyhub đang thúc đẩy hoạt động kinh doanh của House of Gloss như thế nào
+                </h2>
+                <h3 class="mt-4 font-semibold text-sm text-gray-400">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet dolore magna aliquam erat volutpat.
+                </h3>
+            </a>
+        </div>
+        <div class="flex justify-center items-center">
+            <button class="uppercase btn btn-prymary mt-12 py-2 px-7 font-bold text-base">Xem Tất bài Viết</button>
+        </div>
     </div>
     <!-- End Blog -->
 </section>
