@@ -21,6 +21,13 @@
     import imgBlog1 from '$lib/assets/Image/Rectangle88blog1.png';
     import imgBlog2 from '$lib/assets/Image/Rectangle94blog2.png';
     import imgBlog3 from '$lib/assets/Image/Rectangle95blog3.png';
+    import iconClient1 from '$lib/assets/Image/image0clitent1.png';
+    import iconClient2 from '$lib/assets/Image/6clitent2.png';
+    import iconClient3 from '$lib/assets/Image/2clitent3.png';
+    import iconClient4 from '$lib/assets/Image/15clitent4.png';
+    import iconClient5 from '$lib/assets/Image/14clitent5.png';
+    import iconClient6 from '$lib/assets/Image/11clitent6.png';
+    import imgResisters from '$lib/assets/Image/47354imgResrister.png';
 
     let activeFeatureOn;
     activeFeature.subscribe((value) => {
@@ -530,4 +537,100 @@
         </div>
     </div>
     <!-- End Blog -->
+
+    <!-- Begin client -->
+    <div class="max-w-screen-lg mx-auto px-4 my-14">
+        <h1 class="mb-7 font-bold text-3xl">Khách hàng</h1>
+        <div class="grid grid-cols-6 gap-8">
+            <div class="rounded-md border-[2px] border-gray-200 flex justify-center items-center p-2">
+                <img src={iconClient1} alt="" />
+            </div>
+            <div class="rounded-md border-[2px] border-gray-200 flex justify-center items-center p-2">
+                <img src={iconClient2} alt="" />
+            </div>
+            <div class="rounded-md border-[2px] border-gray-200 flex justify-center items-center p-2">
+                <img src={iconClient3} alt="" />
+            </div>
+            <div class="rounded-md border-[2px] border-gray-200 flex justify-center items-center p-2">
+                <img src={iconClient4} alt="" />
+            </div>
+            <div class="rounded-md border-[2px] border-gray-200 flex justify-center items-center p-2">
+                <img src={iconClient5} alt="" />
+            </div>
+            <div class="rounded-md border-[2px] border-gray-200 flex justify-center items-center p-2">
+                <img src={iconClient6} alt="" />
+            </div>
+        </div>
+    </div>
+    <!-- End client -->
+
+    <!-- Begin advise -->
+    <div class="bg-[#EFF4F6] ">
+        <div class="max-w-screen-lg mx-auto px-4 py-11 my-14">
+            <h1 class="mb-7 font-bold text-3xl">Đăng ký tư vấn</h1>
+            <div class="mt-6 grid grid-cols-2 gap-2">
+                <form method="POST">
+                    <div class="bg-white py-3 px-4 text-gray-400 w-full flex items-center rounded-lg mb-5">
+                        <i class="fa-solid fa-user" />
+
+                        <input
+                            class="w-full ml-2 focus-within:outline-none font-semibold text-base text-gray-600 placeholder:font-semibold placeholder:text-gray-300"
+                            type="text"
+                            name="name"
+                            placeholder="Họ và tên"
+                        />
+                    </div>
+                    <div class="bg-white py-3 px-4 text-gray-400 w-full flex items-center rounded-lg mb-5">
+                        <i class="fa-solid fa-phone" />
+
+                        <input
+                            class="w-full ml-2 focus-within:outline-none font-semibold text-base text-gray-600 placeholder:font-semibold placeholder:text-gray-300"
+                            type="tel"
+                            name="phoneNumber"
+                            placeholder="Số điện thoại"
+                        />
+                    </div>
+                    <div class="bg-white py-3 px-4 text-gray-400 w-full flex items-center rounded-lg mb-5">
+                        <i class="fa-solid fa-envelope" />
+                        <input
+                            class="w-full ml-2 focus-within:outline-none font-semibold text-base text-gray-600 placeholder:font-semibold placeholder:text-gray-300"
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                        />
+                    </div>
+                    <div class="bg-white py-3 px-4 text-gray-400 w-full flex items-center rounded-lg mb-5">
+                        <i class="fa-solid fa-shop" />
+                        <input
+                            class="w-full ml-2 focus-within:outline-none font-semibold text-base text-gray-600 placeholder:font-semibold placeholder:text-gray-300"
+                            type="text"
+                            name="ShopName"
+                            placeholder="Tên cửa hàng"
+                        />
+                    </div>
+                    <div class="bg-white py-3 px-4 text-gray-400 w-full flex items-center rounded-lg mb-5">
+                        <i class="fa-solid fa-briefcase" />
+                        <input
+                            class="w-full ml-2 focus-within:outline-none font-semibold text-base text-gray-600 placeholder:font-semibold placeholder:text-gray-300"
+                            type="text"
+                            name="business"
+                            placeholder="Ngành nghề kinh doanh"
+                        />
+                    </div>
+                    <div class="bg-white py-3 px-4 text-gray-400 w-full flex items-center rounded-lg mb-5">
+                        <i class="fa-solid fa-location-pin" />
+                        <input
+                            class="w-full ml-2 focus-within:outline-none font-semibold text-base text-gray-600 placeholder:font-semibold placeholder:text-gray-300"
+                            type="text"
+                            name="location"
+                            placeholder="Địa chỉ"
+                        />
+                    </div>
+                    <button class="btn btn-prymary py-2 px-7 font-bold text-base">Gửi yêu cầu</button>
+                </form>
+                <div class="ml-4"><img src={imgResisters} alt="" /></div>
+            </div>
+        </div>
+    </div>
+    <!-- End advise -->
 </section>
