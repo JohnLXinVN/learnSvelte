@@ -2,11 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* begin-Homecss; */
 .navItem {
     @apply mr-8 cursor-pointer h-full flex items-center;
 }
 
 .activeNavHover {
+    @apply relative hover:text-primary before:duration-300 before:absolute hover:before:h-[3px] before:bottom-0 before:w-0 hover:before:w-full before:bg-primary before:rounded-sm transition-all duration-300;
 }
 
 .activeNav {
@@ -25,10 +27,28 @@
     @apply bg-primary text-white;
 }
 
-.activeItemNavHover {
+.activeItemFeatureNavHover {
     @apply hover:bg-primary hover:!text-white transition-all duration-200;
 }
 
 .activeItemNavSelectFeatureIcon {
     @apply text-white;
+}
+
+.cssItemSelectFeature {
+    @apply rounded-md cursor-pointer px-4 py-2 my-2 flex font-bold text-lg  w-full items-center activeItemFeatureNavHover;
+}
+
+/* End-homecss; */
+
+.activeCategories {
+    @apply text-white bg-primary;
+}
+
+.activeHoverCategories {
+    @apply hover:text-white hover:bg-primary;
+}
+
+.activeBtnPaginate {
+    @apply bg-primary text-white;
 }

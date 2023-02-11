@@ -13,6 +13,12 @@ module.exports = {
                     650: '#EE8300',
                 },
             },
+            height: {
+                header: '70px',
+            },
+            margin: {
+                header: '70px',
+            },
             fontSize: {
                 '4.5xl': '40px',
             },
@@ -21,12 +27,17 @@ module.exports = {
             },
             animation: {
                 scale: 'scale 1.5s linear infinite',
+                leftInto: 'leftInto .3s linear',
             },
             keyframes: {
                 scale: {
                     '0%': { transform: 'scale(1)' },
                     '50%': { transform: 'scale(1.2)' },
                     '100%': { transform: 'scale(1)' },
+                },
+                leftInto: {
+                    '0%': { transform: 'translateX(80%)' },
+                    '100%': { transform: 'translateX(0)' },
                 },
             },
         },

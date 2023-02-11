@@ -3,6 +3,10 @@ body {
     color: #141416;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: Montserrat;
     src: url('./lib/assets/Fonts/Montserrat-Thin.ttf');
@@ -37,3 +41,20 @@ body {
     background-clip: initial;
     background-color: initial;
 }
+
+/* Beginblogcss */
+.btnReturnHome:hover .iconArrowHome {
+    transform: translateX(-4px);
+}
+/* EndBlogCss */
+
+/* Begin Banner */
+.swiper-button-prev:after {
+    content: '' !important;
+}
+
+.swiper-button-next:after {
+    content: '' !important;
+}
+
+/* End Banner */

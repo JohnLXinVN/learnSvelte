@@ -28,6 +28,18 @@
     import iconClient5 from '$lib/assets/Image/14clitent5.png';
     import iconClient6 from '$lib/assets/Image/11clitent6.png';
     import imgResisters from '$lib/assets/Image/47354imgResrister.png';
+    import featureMobile1 from '$lib/assets/Image/featuremobile1.png';
+    import featureMobile2 from '$lib/assets/Image/featuremobile2.png';
+    import featureMobile3 from '$lib/assets/Image/featuremobile3.png';
+    import featureMobile4 from '$lib/assets/Image/featuremobile4.png';
+    import featureMobile5 from '$lib/assets/Image/featuremobile5.png';
+    import featureMobile6 from '$lib/assets/Image/featuremobile6.png';
+    import featureMobile7 from '$lib/assets/Image/featuremobile7.png';
+    import featureMobile8 from '$lib/assets/Image/featuremobile8.png';
+    import featureMobile9 from '$lib/assets/Image/featuremobile9.png';
+    import featureMobile10 from '$lib/assets/Image/featuremobile10.png';
+    import featureMobile11 from '$lib/assets/Image/featuremobile11.png';
+    import featureMobile12 from '$lib/assets/Image/featuremobile12.png';
 
     let activeFeatureOn;
     activeFeature.subscribe((value) => {
@@ -44,18 +56,18 @@
             magni excepturi modi accusantium, nulla odit sint eos! Ipsam magni doloremque dolorem animi, facere hic
             libero deserunt.
         </p>
-        <div class="mt-7 flex justify-center items-center ">
-            <div class="flex flex-col justify-center ] items-center px-5 text-center">
+        <div class="mt-7 sm:flex max-sm:flex-col justify-center items-center ">
+            <div class="flex flex-col justify-center ] items-center px-5 text-center max-md:py-4">
                 <img src={iconIntroduce1} alt="" class="mb-9" />
                 <p class="font-bold text-lg">Pần mềm Xspa Quản lý đặt lịch Phát triển doanh số</p>
             </div>
             <div
-                class=" flex flex-col justify-center  items-center px-5 text-center border-x-1 border-x-[1px] border-gray-300 "
+                class=" flex flex-col justify-center  items-center px-5 text-center max-md:py-4 max-md:border-y-1 max-md:border-y-[1px] max-md:border-gray-300 md:border-x-1 md:border-x-[1px] md:border-gray-300 "
             >
                 <img src={iconIntroduce2} alt="" class="mb-9" />
                 <p class="font-bold text-lg">Quản lý nhiều cơ sở trên cùng một phần mềm</p>
             </div>
-            <div class="flex flex-col justify-center  items-center px-5 text-center">
+            <div class="flex flex-col justify-center  items-center px-5 text-center max-md:py-4">
                 <img src={iconIntroduce3} alt="" class="mb-9" />
                 <p class="font-bold text-lg">Có thể tuỳ biến 100% và chạy tên miền riêng theo thương hiệu</p>
             </div>
@@ -64,14 +76,14 @@
     <!-- End Introduce -->
 
     <!-- Begin service -->
-    <div class="max-w-screen-lg mx-auto px-4 mt-14">
+    <div class="max-w-screen-lg mx-auto px-4 mt-14" id="service">
         <h1 class="mb-7 font-bold text-3xl">Dịch vụ</h1>
         <p class="font-semibold text-sm w-[60%] text-gray-400">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus delectus quo quaerat necessitatibus
             magni excepturi modi accusantium, nulla odit sint eos! Ipsam magni doloremque dolorem animi, facere hic
             libero deserunt.
         </p>
-        <div class="grid grid-cols-4 gap-5 mt-11">
+        <div class="grid lg:grid-cols-4 md:grid-cols-3 max-md:grid-cols-2 gap-5 mt-11">
             <div class="relative">
                 <img src={imgService1} alt="" />
                 <div class="absolute bottom-2 left-[50%] translate-x-[-50%] bg-white py-2 px-8 w-[75%] rounded-md">
@@ -122,17 +134,18 @@
             </div>
         </div>
     </div>
-
     <!-- End service -->
 
     <!-- Begin feature -->
-    <div class="mt-14 select-feature">
-        <div class="max-w-screen-lg mx-auto px-4 pb-4">
+    <div class="mt-14 select-feature max-lg:hidden" id="feature">
+        <div class="max-w-screen-lg mx-auto px-4 pb-12 ">
             <div class="py-12 font-bold text-3xl">Tính năng</div>
-            <div class="flex">
-                <div class="text-left">
+            <div class="flex ">
+                <div class="text-left w-[45%]">
                     <button
-                        class="rounded-md cursor-pointer px-4 py-2 my-2 flex font-bold text-lg  w-[340px] items-center activeItemNavHover checkactive activeItemNavSelectFeature"
+                        class={activeFeatureOn == 'booking'
+                            ? 'cssItemSelectFeature activeItemNavSelectFeature'
+                            : 'cssItemSelectFeature'}
                         on:click={() =>
                             activeFeature.update((value) => {
                                 value = 'booking';
@@ -143,7 +156,9 @@
                         <h1 class="ml-4 text-white">Booking</h1>
                     </button>
                     <button
-                        class="rounded-md cursor-pointer px-4 py-2 my-2 flex font-bold text-lg w-[340px] items-center activeItemNavHover checkactive "
+                        class={activeFeatureOn == 'quanligiuong'
+                            ? 'cssItemSelectFeature activeItemNavSelectFeature'
+                            : 'cssItemSelectFeature'}
                         on:click={() =>
                             activeFeature.update((value) => {
                                 value = 'quanligiuong';
@@ -154,7 +169,9 @@
                         <h1 class="ml-4 text-white">Quản lí giường</h1>
                     </button>
                     <button
-                        class="rounded-md cursor-pointer px-4 py-2 my-2 flex font-bold text-lg w-[340px] items-center activeItemNavHover checkactive"
+                        class={activeFeatureOn == 'quanlihoadon'
+                            ? 'cssItemSelectFeature activeItemNavSelectFeature'
+                            : 'cssItemSelectFeature'}
                         on:click={() =>
                             activeFeature.update((value) => {
                                 value = 'quanlihoadon';
@@ -165,7 +182,9 @@
                         <h1 class="ml-4 text-white">Quản lí hoá đơn</h1>
                     </button>
                     <button
-                        class="rounded-md cursor-pointer px-4 py-2 my-2 flex font-bold text-lg w-[340px] items-center activeItemNavHover checkactive"
+                        class={activeFeatureOn == 'quanlikhachhang'
+                            ? 'cssItemSelectFeature activeItemNavSelectFeature'
+                            : 'cssItemSelectFeature'}
                         on:click={() =>
                             activeFeature.update((value) => {
                                 value = 'quanlikhachhang';
@@ -176,7 +195,9 @@
                         <h1 class="ml-4 text-white">Quản lí khách hàng</h1>
                     </button>
                     <button
-                        class="rounded-md cursor-pointer px-4 py-2 my-2 flex font-bold text-lg w-[340px] items-center activeItemNavHover checkactive"
+                        class={activeFeatureOn == 'thenap'
+                            ? 'cssItemSelectFeature activeItemNavSelectFeature'
+                            : 'cssItemSelectFeature'}
                         on:click={() =>
                             activeFeature.update((value) => {
                                 value = 'thenap';
@@ -187,7 +208,9 @@
                         <h1 class="ml-4 text-white">Thẻ nạp</h1>
                     </button>
                     <button
-                        class="rounded-md cursor-pointer px-4 py-2 my-2 flex font-bold text-lg w-[340px] items-center activeItemNavHover checkactive"
+                        class={activeFeatureOn == 'quanlinophi'
+                            ? 'cssItemSelectFeature activeItemNavSelectFeature'
+                            : 'cssItemSelectFeature'}
                         on:click={() =>
                             activeFeature.update((value) => {
                                 value = 'quanlinophi';
@@ -198,10 +221,12 @@
                         <h1 class="ml-4 text-white">Quản lí nợ phí</h1>
                     </button>
                     <button
-                        class="rounded-md cursor-pointer px-4 py-2 my-2 flex font-bold text-lg w-[340px] items-center activeItemNavHover checkactive"
+                        class={activeFeatureOn == 'goilieutrinh'
+                            ? 'cssItemSelectFeature activeItemNavSelectFeature'
+                            : 'cssItemSelectFeature'}
                         on:click={() =>
                             activeFeature.update((value) => {
-                                value = 'Goilieutrinh';
+                                value = 'goilieutrinh';
                                 return value;
                             })}
                     >
@@ -209,7 +234,9 @@
                         <h1 class="ml-4 text-white">Gói liệu trình</h1>
                     </button>
                     <button
-                        class="rounded-md cursor-pointer px-4 py-2 my-2 flex font-bold text-lg w-[340px] items-center activeItemNavHover checkactive"
+                        class={activeFeatureOn == 'quanlikhovattu'
+                            ? 'cssItemSelectFeature activeItemNavSelectFeature'
+                            : 'cssItemSelectFeature'}
                         on:click={() =>
                             activeFeature.update((value) => {
                                 value = 'quanlikhovattu';
@@ -220,7 +247,9 @@
                         <h1 class="ml-4 text-white">Quản lí kho, vật tư</h1>
                     </button>
                     <button
-                        class="rounded-md cursor-pointer px-4 py-2 my-2 flex font-bold text-lg w-[340px] items-center activeItemNavHover checkactive"
+                        class={activeFeatureOn == 'quanlithuchi'
+                            ? 'cssItemSelectFeature activeItemNavSelectFeature'
+                            : 'cssItemSelectFeature'}
                         on:click={() =>
                             activeFeature.update((value) => {
                                 value = 'quanlithuchi';
@@ -231,7 +260,9 @@
                         <h1 class="ml-4 text-white">Quản lí thu chi</h1>
                     </button>
                     <button
-                        class="rounded-md cursor-pointer px-4 py-2 my-2 flex font-bold text-lg w-[340px] items-center activeItemNavHover checkactive"
+                        class={activeFeatureOn == 'thongke'
+                            ? 'cssItemSelectFeature activeItemNavSelectFeature'
+                            : 'cssItemSelectFeature'}
                         on:click={() =>
                             activeFeature.update((value) => {
                                 value = 'thongke';
@@ -242,7 +273,9 @@
                         <h1 class="ml-4 text-white">Thông kê</h1>
                     </button>
                     <button
-                        class="rounded-md cursor-pointer px-4 py-2 my-2 flex font-bold text-lg w-[340px] items-center activeItemNavHover checkactive"
+                        class={activeFeatureOn == 'thietlapchinhanh'
+                            ? 'cssItemSelectFeature activeItemNavSelectFeature'
+                            : 'cssItemSelectFeature'}
                         on:click={() =>
                             activeFeature.update((value) => {
                                 value = 'thietlapchinhanh';
@@ -253,7 +286,9 @@
                         <h1 class="ml-4 text-white">Thiết lập chi nhánh</h1>
                     </button>
                     <button
-                        class="rounded-md cursor-pointer px-4 py-2 my-2 flex font-bold text-lg w-[340px] items-center activeItemNavHover checkactive"
+                        class={activeFeatureOn == 'phanquyentaikhoan'
+                            ? 'cssItemSelectFeature activeItemNavSelectFeature'
+                            : 'cssItemSelectFeature'}
                         on:click={() =>
                             activeFeature.update((value) => {
                                 value = 'phanquyentaikhoan';
@@ -363,12 +398,125 @@
             </div>
         </div>
     </div>
-    <!-- End feature -->
+
+    <div class="mt-14 bg-[#005478] lg:hidden" id="feature">
+        <div class="max-w-screen-lg mx-auto px-4 pb-12 ">
+            <div class="py-7 font-bold text-3xl text-white">Tính năng</div>
+            <div class="flex items-center py-4 border-t-2 border-opacity-20 border-white">
+                <div>
+                    <img src={featureMobile1} alt="" />
+                </div>
+                <div class="ml-3">
+                    <h1 class="font-bold text-base text-white">Booking</h1>
+                    <p class="font-semibold text-sm text-gray-200">Quản lý, sắp xếp lịch booking của khách hàng</p>
+                </div>
+            </div>
+            <div class="flex items-center py-4 border-t-2 border-opacity-20 border-white">
+                <div>
+                    <img src={featureMobile2} alt="" />
+                </div>
+                <div class="ml-3">
+                    <h1 class="font-bold text-base text-white">Quản lý giường</h1>
+                    <p class="font-semibold text-sm text-gray-200">Quản lý, sắp xếp lịch booking của khách hàng</p>
+                </div>
+            </div>
+            <div class="flex items-center py-4 border-t-2 border-opacity-20 border-white">
+                <div>
+                    <img src={featureMobile3} alt="" />
+                </div>
+                <div class="ml-3">
+                    <h1 class="font-bold text-base text-white">Quản lý hóa đơn</h1>
+                    <p class="font-semibold text-sm text-gray-200">Quản lý, sắp xếp lịch booking của khách hàng</p>
+                </div>
+            </div>
+            <div class="flex items-center py-4 border-t-2 border-opacity-20 border-white">
+                <div>
+                    <img src={featureMobile4} alt="" />
+                </div>
+                <div class="ml-3">
+                    <h1 class="font-bold text-base text-white">Quản lý khách hàng</h1>
+                    <p class="font-semibold text-sm text-gray-200">Quản lý, sắp xếp lịch booking của khách hàng</p>
+                </div>
+            </div>
+            <div class="flex items-center py-4 border-t-2 border-opacity-20 border-white">
+                <div>
+                    <img src={featureMobile5} alt="" />
+                </div>
+                <div class="ml-3">
+                    <h1 class="font-bold text-base text-white">Thẻ nạp</h1>
+                    <p class="font-semibold text-sm text-gray-200">Quản lý, sắp xếp lịch booking của khách hàng</p>
+                </div>
+            </div>
+            <div class="flex items-center py-4 border-t-2 border-opacity-20 border-white">
+                <div>
+                    <img src={featureMobile6} alt="" />
+                </div>
+                <div class="ml-3">
+                    <h1 class="font-bold text-base text-white">Quản lý Nợ Phí</h1>
+                    <p class="font-semibold text-sm text-gray-200">Quản lý, sắp xếp lịch booking của khách hàng</p>
+                </div>
+            </div>
+            <div class="flex items-center py-4 border-t-2 border-opacity-20 border-white">
+                <div>
+                    <img src={featureMobile7} alt="" />
+                </div>
+                <div class="ml-3">
+                    <h1 class="font-bold text-base text-white">Gói liệu trình</h1>
+                    <p class="font-semibold text-sm text-gray-200">Quản lý, sắp xếp lịch booking của khách hàng</p>
+                </div>
+            </div>
+            <div class="flex items-center py-4 border-t-2 border-opacity-20 border-white">
+                <div>
+                    <img src={featureMobile8} alt="" />
+                </div>
+                <div class="ml-3">
+                    <h1 class="font-bold text-base text-white">Quản lý Kho, vật tư</h1>
+                    <p class="font-semibold text-sm text-gray-200">Quản lý, sắp xếp lịch booking của khách hàng</p>
+                </div>
+            </div>
+            <div class="flex items-center py-4 border-t-2 border-opacity-20 border-white">
+                <div>
+                    <img src={featureMobile9} alt="" />
+                </div>
+                <div class="ml-3">
+                    <h1 class="font-bold text-base text-white">Quản lý Thu Chi</h1>
+                    <p class="font-semibold text-sm text-gray-200">Quản lý, sắp xếp lịch booking của khách hàng</p>
+                </div>
+            </div>
+            <div class="flex items-center py-4 border-t-2 border-opacity-20 border-white">
+                <div>
+                    <img src={featureMobile10} alt="" />
+                </div>
+                <div class="ml-3">
+                    <h1 class="font-bold text-base text-white">Thống kê</h1>
+                    <p class="font-semibold text-sm text-gray-200">Quản lý, sắp xếp lịch booking của khách hàng</p>
+                </div>
+            </div>
+            <div class="flex items-center py-4 border-t-2 border-opacity-20 border-white">
+                <div>
+                    <img src={featureMobile11} alt="" />
+                </div>
+                <div class="ml-3">
+                    <h1 class="font-bold text-base text-white">Thiết lập chi nhánh</h1>
+                    <p class="font-semibold text-sm text-gray-200">Quản lý, sắp xếp lịch booking của khách hàng</p>
+                </div>
+            </div>
+            <div class="flex items-center py-4 border-t-2 border-opacity-20 border-white">
+                <div>
+                    <img src={featureMobile12} alt="" />
+                </div>
+                <div class="ml-3">
+                    <h1 class="font-bold text-base text-white">Phân quyền tài khoản</h1>
+                    <p class="font-semibold text-sm text-gray-200">Quản lý, sắp xếp lịch booking của khách hàng</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Begin establish -->
-    <div class="max-w-screen-lg mx-auto px-4 my-14 flex items-center ">
-        <img src={imgEstablish} alt="" />
-        <div class="ml-[8%]">
+    <div class="max-w-screen-lg mx-auto px-4 my-14 grid grid-cols-12 items-center" id="establish">
+        <img src={imgEstablish} class="lg:col-span-6 md:col-span-4 max-md:col-span-12" alt="" />
+        <div class="ml-[8%] lg:col-span-6 md:col-span-8 max-md:col-span-12 max-md:mt-10">
             <h1 class="font-bold text-2xl ">Thiết lập</h1>
             <div class="flex my-3 items-center">
                 <div
@@ -427,11 +575,13 @@
     <!-- End establish -->
 
     <!-- BeginWhyUs -->
-    <div class="bg-[url('src/lib/assets/Image/Rectangle106imgWhyUs.png')] py-16">
+    <div class="bg-[url('src/lib/assets/Image/Rectangle106imgWhyUs.png')] py-16" id="whyus">
         <div class="max-w-screen-lg px-4 mx-auto ">
             <h1 class="font-bold text-3xl text-white">Tại sao chọn chúng tôi</h1>
             <div class="flex mt-14  flex-wrap">
-                <div class=" basis-[25%]  px-3 w-full">
+                <div
+                    class=" lg:basis-[25%] max-lg:basis-[50%] max-lg:border-r-2 max-lg:border-b-2 max-lg:py-4 border-white px-3 w-full"
+                >
                     <div class="w-full ml-auto mr-auto flex justify-center items-center">
                         <img src={WhyUsIcon1} alt="" class="mb-8" />
                     </div>
@@ -439,13 +589,17 @@
                         Cung cấp giải pháp quản lý tổng thể
                     </div>
                 </div>
-                <div class=" basis-[25%]  px-3  ml-auto mr-0">
+                <div
+                    class=" lg:basis-[25%] max-lg:basis-[50%]   max-lg:border-b-2 lg:border-x-2 max-lg:py-4 border-white  px-3  ml-auto mr-0"
+                >
                     <div class="w-full ml-auto mr-auto flex justify-center items-center">
                         <img src={WhyUsIcon2} alt="" class="mb-8 " />
                     </div>
                     <div class="text-center ml-auto mr-auto font-bold text-lg text-white">Dễ dàng sử dụng, quản lý</div>
                 </div>
-                <div class=" basis-[25%]  px-3  ml-auto mr-0">
+                <div
+                    class=" lg:basis-[25%] max-lg:basis-[50%] max-lg:border-r-2 lg:border-r-2 max-lg:py-4 border-white  px-3  ml-auto mr-0"
+                >
                     <div class="w-full ml-auto mr-auto flex justify-center items-center">
                         <img src={WhyUsIcon3} alt="" class="mb-8 " />
                     </div>
@@ -453,7 +607,7 @@
                         Bảo mật dữ liệu tuyệt đối
                     </div>
                 </div>
-                <div class=" basis-[25%]  px-3  ml-auto mr-0">
+                <div class=" lg:basis-[25%] max-lg:basis-[50%] max-lg:py-4  px-3  ml-auto mr-0">
                     <div class="w-full ml-auto mr-auto flex justify-center items-center">
                         <img src={WhyUsIcon4} alt="" class="mb-8 h-[100px]" />
                     </div>
@@ -467,11 +621,11 @@
     <!-- Begin Blog -->
     <div class="max-w-screen-lg mx-auto px-4 my-14">
         <h1 class="mb-7 font-bold text-3xl">Blog</h1>
-        <div class="grid grid-cols-3 gap-8">
-            <a href="/">
+        <div class="grid grid-cols-12 gap-8">
+            <a href="/" class="col-span-4 max-lg:col-span-12 max-lg:mb-4">
                 <div class="relative">
                     <div class="overflow-hidden rounded-xl">
-                        <img src={imgBlog1} alt="" class="hover:scale-[1.3] transition-all" />
+                        <img src={imgBlog1} alt="" class="hover:scale-[1.3] transition-all w-full" />
                     </div>
                     <div class="absolute bg-[#005478] rounded text-white top-3 right-3 flex flex-col py-1 px-2">
                         <span class="font-semibold text-sm">16.10</span>
@@ -489,10 +643,10 @@
                     laoreet dolore magna aliquam erat volutpat.
                 </h3>
             </a>
-            <a href="/">
+            <a href="/" class="col-span-4 max-lg:col-span-12 max-lg:mb-4">
                 <div class="relative">
                     <div class="overflow-hidden rounded-xl">
-                        <img src={imgBlog2} alt="" class="hover:scale-[1.3] transition-all" />
+                        <img src={imgBlog2} alt="" class="hover:scale-[1.3] transition-all w-full" />
                     </div>
                     <div class="absolute bg-[#005478] rounded text-white top-3 right-3 flex flex-col py-1 px-2">
                         <span class="font-semibold text-sm">16.10</span>
@@ -510,10 +664,10 @@
                     laoreet dolore magna aliquam erat volutpat.
                 </h3>
             </a>
-            <a href="/">
+            <a href="/" class="col-span-4 max-lg:col-span-12 max-lg:mb-4">
                 <div class="relative">
                     <div class="overflow-hidden rounded-xl">
-                        <img src={imgBlog3} alt="" class="hover:scale-[1.3] transition-all" />
+                        <img src={imgBlog3} alt="" class="hover:scale-[1.3] transition-all w-full" />
                     </div>
                     <div class="absolute bg-[#005478] rounded text-white top-3 right-3 flex flex-col py-1 px-2">
                         <span class="font-semibold text-sm">16.10</span>
@@ -533,31 +687,48 @@
             </a>
         </div>
         <div class="flex justify-center items-center">
-            <button class="uppercase btn btn-prymary mt-12 py-2 px-7 font-bold text-base">Xem Tất bài Viết</button>
+            <a
+                href="/blog"
+                class="uppercase btn btn-prymary mt-12 py-2 px-7 font-bold text-base hover:bg-[#058d9f] transition-all duration-300"
+            >
+                Xem Tất bài Viết
+            </a>
         </div>
     </div>
     <!-- End Blog -->
 
     <!-- Begin client -->
-    <div class="max-w-screen-lg mx-auto px-4 my-14">
+    <div class="max-w-screen-lg mx-auto px-4 my-14" id="client">
         <h1 class="mb-7 font-bold text-3xl">Khách hàng</h1>
-        <div class="grid grid-cols-6 gap-8">
-            <div class="rounded-md border-[2px] border-gray-200 flex justify-center items-center p-2">
+        <div class="grid grid-cols-12 gap-8">
+            <div
+                class="lg:col-span-2 md:col-span-4 max-md:col-span-6 rounded-md border-[2px] border-gray-200 flex justify-center items-center p-2"
+            >
                 <img src={iconClient1} alt="" />
             </div>
-            <div class="rounded-md border-[2px] border-gray-200 flex justify-center items-center p-2">
+            <div
+                class="lg:col-span-2 md:col-span-4 max-md:col-span-6 rounded-md border-[2px] border-gray-200 flex justify-center items-center p-2"
+            >
                 <img src={iconClient2} alt="" />
             </div>
-            <div class="rounded-md border-[2px] border-gray-200 flex justify-center items-center p-2">
+            <div
+                class="lg:col-span-2 md:col-span-4 max-md:col-span-6 rounded-md border-[2px] border-gray-200 flex justify-center items-center p-2"
+            >
                 <img src={iconClient3} alt="" />
             </div>
-            <div class="rounded-md border-[2px] border-gray-200 flex justify-center items-center p-2">
+            <div
+                class="lg:col-span-2 md:col-span-4 max-md:col-span-6 rounded-md border-[2px] border-gray-200 flex justify-center items-center p-2"
+            >
                 <img src={iconClient4} alt="" />
             </div>
-            <div class="rounded-md border-[2px] border-gray-200 flex justify-center items-center p-2">
+            <div
+                class="lg:col-span-2 md:col-span-4 max-md:col-span-6 rounded-md border-[2px] border-gray-200 flex justify-center items-center p-2"
+            >
                 <img src={iconClient5} alt="" />
             </div>
-            <div class="rounded-md border-[2px] border-gray-200 flex justify-center items-center p-2">
+            <div
+                class="lg:col-span-2 md:col-span-4 max-md:col-span-6 rounded-md border-[2px] border-gray-200 flex justify-center items-center p-2"
+            >
                 <img src={iconClient6} alt="" />
             </div>
         </div>
@@ -565,11 +736,11 @@
     <!-- End client -->
 
     <!-- Begin advise -->
-    <div class="bg-[#EFF4F6] ">
-        <div class="max-w-screen-lg mx-auto px-4 py-11 my-14">
+    <div class="bg-[#EFF4F6] " id="contact">
+        <div class="max-w-screen-lg mx-auto px-4 py-11 mt-14">
             <h1 class="mb-7 font-bold text-3xl">Đăng ký tư vấn</h1>
-            <div class="mt-6 grid grid-cols-2 gap-2">
-                <form method="POST">
+            <div class="mt-6 grid grid-cols-12 gap-2">
+                <form method="POST" class="col-span-6 max-md:col-span-12">
                     <div class="bg-white py-3 px-4 text-gray-400 w-full flex items-center rounded-lg mb-5">
                         <i class="fa-solid fa-user" />
 
@@ -626,9 +797,12 @@
                             placeholder="Địa chỉ"
                         />
                     </div>
-                    <button class="btn btn-prymary py-2 px-7 font-bold text-base">Gửi yêu cầu</button>
+                    <button
+                        class="btn btn-prymary py-2 px-7 font-bold text-base hover:bg-[#058d9f] transition-all duration-300 "
+                        >Gửi yêu cầu</button
+                    >
                 </form>
-                <div class="ml-4"><img src={imgResisters} alt="" /></div>
+                <div class="ml-4 col-span-6 max-md:hidden"><img src={imgResisters} alt="" /></div>
             </div>
         </div>
     </div>
