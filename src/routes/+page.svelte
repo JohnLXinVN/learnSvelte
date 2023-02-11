@@ -1,5 +1,4 @@
 <script lang="ts">
-    import Banner from '../component/Home/Banner.svelte';
     import Content from '../component/Home/Content.svelte';
     import Header from '../component/Header.svelte';
     import Footer from '../component/Footer.svelte';
