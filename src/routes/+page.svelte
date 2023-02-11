@@ -20,7 +20,6 @@
 <section class="relative">
     <Header />
     <div class="mt-header">
-        <Banner />
         <Content />
     </div>
     <Footer />
