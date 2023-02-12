@@ -9,7 +9,19 @@
             href="/"
             class="btnReturnHome pt-7 font-bold text-primary flex w-fit justify-center items-center max-md:hidden"
         >
-            <i class="fa-sharp fa-solid fa-arrow-left mr-2 flex items-center iconArrowHome transition-all" />
+            <div class="mr-2 flex items-center iconArrowHome transition-all">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+                </svg>
+            </div>
+
             <div class="font-bold uppercase ">Về trang chủ</div>
         </a>
         <h1 class="font-bold text-4xl mt-10 mb-20 max-md:pt-12">Blog</h1>

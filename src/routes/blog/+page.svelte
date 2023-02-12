@@ -13,7 +13,19 @@
 
 <div class="max-w-screen-lg mx-auto px-4 mt-header">
     <a href="/" class="btnReturnHome pt-7 font-bold text-primary flex w-fit justify-center items-center max-md:hidden">
-        <i class="fa-sharp fa-solid fa-arrow-left mr-2 flex items-center iconArrowHome transition-all" />
+        <div class="mr-2 flex items-center iconArrowHome transition-all">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+            >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+            </svg>
+        </div>
+
         <div class="font-bold uppercase ">Về trang chủ</div>
     </a>
     <div class="grid grid-cols-12 gap-8 pt-7">
@@ -26,7 +38,22 @@
                 placeholder="Tìm kiếm"
                 class="w-full focus-within:outline-none font-semibold"
             />
-            <div class="px-2 h-full hover:cursor-pointer "><i class="fa-solid fa-magnifying-glass" /></div>
+            <div class="px-2 h-full hover:cursor-pointer ">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                    />
+                </svg>
+            </div>
         </div>
     </div>
     <div class="grid grid-cols-12 gap-8 mt-14">
@@ -124,7 +151,16 @@
                 <div
                     class="w-[36px] h-[36px] cursor-pointer flex justify-center items-center bg-gray-300 text-gray-400 font-semibold text-sm rounded-lg "
                 >
-                    <i class="fa-solid fa-chevron-left" />
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
                 </div>
                 <div
                     class="w-[36px] h-[36px] cursor-pointer flex justify-center items-center bg-gray-300 text-gray-400 font-semibold text-sm ml-2 rounded-lg activeBtnPaginate"
@@ -154,7 +190,16 @@
                 <div
                     class="w-[36px] h-[36px] cursor-pointer flex justify-center items-center bg-gray-300 text-gray-400 font-semibold text-sm ml-2 rounded-lg"
                 >
-                    <i class="fa-solid fa-chevron-right" />
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
                 </div>
                 <div
                     class="w-fit px-3 h-[36px] cursor-pointer flex justify-center items-center bg-gray-300 text-gray-400 font-semibold text-sm uppercase ml-2 rounded-lg"
