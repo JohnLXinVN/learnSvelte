@@ -50,6 +50,7 @@
     import featureMobile10 from '$lib/assets/Image/featuremobile10.png';
     import featureMobile11 from '$lib/assets/Image/featuremobile11.png';
     import featureMobile12 from '$lib/assets/Image/featuremobile12.png';
+    import imgBannerMobile1 from '$lib/assets/Image/imgBannerMobile1.png';
 
     let activeFeatureOn;
     activeFeature.subscribe((value) => {
@@ -78,7 +79,7 @@
         >
             <SwiperSlide class="w-full">
                 <div
-                    class="max-md:bg-[url('src/lib/assets/Image/imgBannerMobile1.png')] md:bg-[url('src/lib/assets/Image/Mask_groupBanner1.png')] h-[560px] bg-no-repeat w-full bg-center max-md:bg-cover"
+                    class="max-md:bg-[url('$lib/assets/Image/imgBannerMobile1.png')] md:bg-[url('$lib/assets/Image/Mask_groupBanner1.png')] h-[560px] bg-no-repeat w-full bg-center max-md:bg-cover"
                 >
                     <div class="h-full flex flex-col items-center justify-center max-md:p-6">
                         <div class=" items-center flex flex-col text-center">
@@ -98,7 +99,7 @@
             </SwiperSlide>
             <SwiperSlide class="w-full">
                 <div
-                    class="max-md:bg-[url('src/lib/assets/Image/imgBannerMobile2.png')] md:bg-[url('src/lib/assets/Image/Mask_groupBanner2.png')] h-[560px] bg-no-repeat w-full bg-center max-md:bg-cover"
+                    class="max-md:bg-[url('$lib/assets/Image/imgBannerMobile2.png')] md:bg-[url('$lib/assets/Image/Mask_groupBanner2.png')] h-[560px] bg-no-repeat w-full bg-center max-md:bg-cover"
                 >
                     <div
                         class="max-w-screen-lg mx-auto px-4 flex flex-col justify-center h-full max-md:justify-start max-md:text-center"
@@ -128,7 +129,7 @@
             </SwiperSlide>
             <SwiperSlide class="w-full">
                 <div
-                    class="max-md:bg-[url('src/lib/assets/Image/imgBannerMobile3.png')] md:bg-[url('src/lib/assets/Image/Mask_groupBanner3.png')] h-[560px] bg-no-repeat w-full bg-center max-md:bg-cover"
+                    class="max-md:bg-[url('$lib/assets/Image/imgBannerMobile3.png')] md:bg-[url('$lib/assets/Image/Mask_groupBanner3.png')] h-[560px] bg-no-repeat w-full bg-center max-md:bg-cover"
                 >
                     <div
                         class="max-w-screen-lg mx-auto px-4 flex flex-col justify-center h-full max-md:justify-end max-md:pb-8"
@@ -695,7 +696,7 @@
     <!-- End establish -->
 
     <!-- BeginWhyUs -->
-    <div class="bg-[url('src/lib/assets/Image/Rectangle106imgWhyUs.png')] py-16" id="whyus">
+    <div class="bg-[url('$lib/assets/Image/Rectangle106imgWhyUs.png')] py-16" id="whyus">
         <div class="max-w-screen-lg px-4 mx-auto ">
             <h1 class="font-bold text-3xl text-white">Tại sao chọn chúng tôi</h1>
             <div class="flex mt-14  flex-wrap">
