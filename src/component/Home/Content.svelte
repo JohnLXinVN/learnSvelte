@@ -50,7 +50,6 @@
     import featureMobile10 from '$lib/assets/Image/featuremobile10.png';
     import featureMobile11 from '$lib/assets/Image/featuremobile11.png';
     import featureMobile12 from '$lib/assets/Image/featuremobile12.png';
-    import imgBannerMobile1 from '$lib/assets/Image/imgBannerMobile1.png';
 
     let activeFeatureOn;
     activeFeature.subscribe((value) => {
@@ -138,7 +137,16 @@
                             <div
                                 class="font-bold max-md:text-base text-lg flex items-center justify-center p-2 w-fit bg-green-500 text-white rounded-full absolute left-0 top-0 "
                             >
-                                <i class="fa-solid fa-check" />
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="w-6 h-6"
+                                >
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg>
                             </div>
                             <div class="ml-11 max-md:text-2xl text-3xl font-bold">
                                 Hoàn tiền<span class="text-primary">100%</span> nếu <br />
@@ -262,7 +270,7 @@
         <div class="max-w-screen-lg mx-auto px-4 pb-12 ">
             <div class="py-12 font-bold text-3xl">Tính năng</div>
             <div class="flex ">
-                <div class="text-left w-[45%]">
+                <div class="text-left max-lg:w-[45%] lg:w-[40%]">
                     <button
                         class={activeFeatureOn == 'booking'
                             ? 'cssItemSelectFeature activeItemNavSelectFeature'
