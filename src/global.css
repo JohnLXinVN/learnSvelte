@@ -57,4 +57,9 @@ html {
     content: '' !important;
 }
 
+p .invalid .svelte-x2gjbb {
+    text-color: red !important;
+    font-size: 16px !important;
+}
+
 /* End Banner */

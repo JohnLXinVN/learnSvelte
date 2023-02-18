@@ -1,9 +1,8 @@
 <script>
-    import Footer from '../../component/Footer.svelte';
-    import HeaderBlog from '../../component/HeaderBlog.svelte';
-
     import '../../app.css';
     import '../../global.css';
+    import Footer from '../../lib/component/Footer.svelte';
+    import HeaderBlog from '../../lib/component/HeaderBlog.svelte';
     import { activeModalBlogNav } from '../../store/store';
 
     const handleSetModalBlog = () => {

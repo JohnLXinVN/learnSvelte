@@ -1,6 +1,6 @@
 <script>
     import srcLogo from '$lib/assets/Image/avatar_XSpa.png';
-    import { activeModalBlogNav } from '../store/store';
+    import { activeModalBlogNav } from '../../store/store';
 
     const handleSetModalBlog = () => {
         activeModalBlogNav.update((value) => {

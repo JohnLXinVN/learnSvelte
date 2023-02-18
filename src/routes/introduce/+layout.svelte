@@ -1,6 +1,6 @@
 <script>
-    import Footer from '../../component/Footer.svelte';
-    import HeaderIntroduce from '../../component/HeaderIntroduce.svelte';
+    import Footer from '../../lib/component/Footer.svelte';
+    import HeaderIntroduce from '../../lib/component/HeaderIntroduce.svelte';
 
     /** @type {import('./$types').LayoutData} */
     export let data;
