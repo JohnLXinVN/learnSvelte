@@ -88,36 +88,6 @@
 
     export let form;
     $: console.log('form', form);
-
-    const phoneRegExp =
-        /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
-
-    let schema = Yup.object().shape({
-        name: Yup.string()
-            .required('Name is required')
-            .min(3, 'Name must be at least 3 characters')
-            .max(64, 'Name must be 64 characters or less'),
-        phoneNumber: Yup.string()
-            .matches(phoneRegExp, 'Phone number is not valid')
-            .required('Phone Number is required'),
-        email: Yup.string().email('Email must be a valid email address').required('Email is required').trim(),
-        ShopName: Yup.string().required('Shop Name is required'),
-        business: Yup.string().required('Business must be a required'),
-        location: Yup.string().required('Location must be a required'),
-    });
-    let fields = { name: '', phoneNumber: '', email: '', ShopName: '', business: '', location: '' };
-    let submitted = false;
-    let isValid;
-    function formSubmit() {
-        submitted = true;
-        isValid = schema.isValidSync(fields);
-    }
-    $: invalid = (name) => {
-        if (submitted) {
-            return isInvalid(schema, name, fields);
-        }
-        return false;
-    };
 </script>
 
 <section class="relative">
@@ -1010,20 +980,11 @@
             <div class="max-w-screen-lg mx-auto px-4 py-11 my-[8rem]">
                 <h1 class="mb-7 font-bold text-3xl">Đăng ký tư vấn</h1>
                 <div class="mt-6 grid grid-cols-12 gap-2">
-                    <Form
-                        method="POST"
-                        action="?/register"
-                        class="lg:col-span-6 max-md:col-span-12 md:col-span-5"
-                        {schema}
-                        {fields}
-                        submitHandler={formSubmit}
-                        {submitted}
-                    >
+                    <form method="POST" action="?/register" use:enhance class="col-span-5 max-md:col-span-12">
                         <div>
                             <div
-                                class="bg-white py-3 px-4 text-gray-400 w-full flex items-center rounded-lg mt-5 {invalid(
-                                    'name',
-                                )
+                                class="bg-white py-3 px-4 text-gray-400 w-full flex items-center rounded-lg mt-5 {form
+                                    ?.errors?.name
                                     ? 'border-red-800 border'
                                     : ''}"
                             >
@@ -1047,17 +1008,18 @@
                                     type="text"
                                     name="name"
                                     placeholder="Họ và tên"
-                                    class:invalid={invalid('name')}
-                                    bind:value={fields.name}
+                                    value={form?.name ?? ''}
                                 />
                             </div>
-                            <Message class="text-red-800 font-semibold text-base" name="name" />
+                            {#if form?.errors?.name}
+                                <p class="text-red-800 font-semibold text-base">{form?.errors?.name}</p>
+                            {/if}
                         </div>
+
                         <div>
                             <div
-                                class="bg-white py-3 px-4 text-gray-400 w-full flex items-center rounded-lg mt-5 {invalid(
-                                    'phoneNumber',
-                                )
+                                class="bg-white py-3 px-4 text-gray-400 w-full flex items-center rounded-lg mt-5 {form
+                                    ?.errors?.phoneNumber
                                     ? 'border-red-800 border'
                                     : ''}"
                             >
@@ -1081,17 +1043,17 @@
                                     type="tel"
                                     name="phoneNumber"
                                     placeholder="Số điện thoại"
-                                    class:invalid={invalid('phoneNumber')}
-                                    bind:value={fields.phoneNumber}
+                                    value={form?.phoneNumber ?? ''}
                                 />
                             </div>
-                            <Message class="text-red-800 font-semibold text-base" name="phoneNumber" />
+                            {#if form?.errors?.phoneNumber}
+                                <p class="text-red-800 font-semibold text-base">{form?.errors?.phoneNumber}</p>
+                            {/if}
                         </div>
                         <div>
                             <div
-                                class="bg-white py-3 px-4 text-gray-400 w-full flex items-center rounded-lg mt-5 {invalid(
-                                    'email',
-                                )
+                                class="bg-white py-3 px-4 text-gray-400 w-full flex items-center rounded-lg mt-5 {form
+                                    ?.errors?.email
                                     ? 'border-red-800 border'
                                     : ''}"
                             >
@@ -1115,17 +1077,17 @@
                                     type="email"
                                     name="email"
                                     placeholder="Email"
-                                    class:invalid={invalid('email')}
-                                    bind:value={fields.email}
+                                    value={form?.email ?? ''}
                                 />
                             </div>
-                            <Message class="text-red-800 font-semibold text-base" name="email" />
+                            {#if form?.errors?.email}
+                                <p class="text-red-800 font-semibold text-base">{form?.errors?.email}</p>
+                            {/if}
                         </div>
                         <div>
                             <div
-                                class="bg-white py-3 px-4 text-gray-400 w-full flex items-center rounded-lg mt-5 {invalid(
-                                    'ShopName',
-                                )
+                                class="bg-white py-3 px-4 text-gray-400 w-full flex items-center rounded-lg mt-5 {form
+                                    ?.errors?.ShopName
                                     ? 'border-red-800 border'
                                     : ''}"
                             >
@@ -1149,17 +1111,17 @@
                                     type="text"
                                     name="ShopName"
                                     placeholder="Tên cửa hàng"
-                                    class:invalid={invalid('ShopName')}
-                                    bind:value={fields.ShopName}
+                                    value={form?.ShopName ?? ''}
                                 />
                             </div>
-                            <Message class="text-red-800 font-semibold text-base" name="ShopName" />
+                            {#if form?.errors?.ShopName}
+                                <p class="text-red-800 font-semibold text-base">{form?.errors?.ShopName}</p>
+                            {/if}
                         </div>
                         <div>
                             <div
-                                class="bg-white py-3 px-4 text-gray-400 w-full flex items-center rounded-lg mt-5 {invalid(
-                                    'business',
-                                )
+                                class="bg-white py-3 px-4 text-gray-400 w-full flex items-center rounded-lg mt-5 {form
+                                    ?.errors?.business
                                     ? 'border-red-800 border'
                                     : ''}"
                             >
@@ -1177,22 +1139,23 @@
                                         d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
                                     />
                                 </svg>
+
                                 <input
                                     class="w-full ml-2 focus-within:outline-none font-semibold text-base text-gray-600 placeholder:font-semibold placeholder:text-gray-300"
                                     type="text"
                                     name="business"
                                     placeholder="Ngành nghề kinh doanh"
-                                    class:invalid={invalid('business')}
-                                    bind:value={fields.business}
+                                    value={form?.business ?? ''}
                                 />
                             </div>
-                            <Message class="text-red-800 font-semibold text-base" name="business" />
+                            {#if form?.errors?.business}
+                                <p class="text-red-800 font-semibold text-base">{form?.errors?.business}</p>
+                            {/if}
                         </div>
                         <div>
                             <div
-                                class="bg-white py-3 px-4 text-gray-400 w-full flex items-center rounded-lg mt-5 {invalid(
-                                    'location',
-                                )
+                                class="bg-white py-3 px-4 text-gray-400 w-full flex items-center rounded-lg mt-5 {form
+                                    ?.errors?.location
                                     ? 'border-red-800 border'
                                     : ''}"
                             >
@@ -1217,24 +1180,23 @@
                                 </svg>
 
                                 <input
-                                    class="w-full ml-2 focus-within:outline-none font-semibold text-base text-gray-600 placeholder:font-semibold placeholder:text-gray-300
-                                        
-                                    "
+                                    class="w-full ml-2 focus-within:outline-none font-semibold text-base text-gray-600 placeholder:font-semibold placeholder:text-gray-300"
                                     type="text"
                                     name="location"
                                     placeholder="Địa chỉ"
-                                    class:invalid={invalid('location')}
-                                    bind:value={fields.location}
+                                    value={form?.location ?? ''}
                                 />
                             </div>
-                            <Message class="text-red-800 font-semibold text-base" name="location" />
+                            {#if form?.errors?.location}
+                                <p class="text-red-800 font-semibold text-base">{form?.errors?.location}</p>
+                            {/if}
                         </div>
                         <button
                             type="submit"
                             class="btn btn-prymary py-2 px-7 font-bold text-base hover:bg-[#058d9f] transition-all duration-300 mt-5"
                             >Gửi yêu cầu</button
                         >
-                    </Form>
+                    </form>
 
                     <div
                         class="lg:col-span-6 md:col-span-7 max-md:hidden h-full items-center flex justify-center absolute right-0 top-[-50%] translate-y-[50%]"
