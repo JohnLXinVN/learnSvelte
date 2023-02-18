@@ -980,7 +980,12 @@
             <div class="max-w-screen-lg mx-auto px-4 py-11 my-[8rem]">
                 <h1 class="mb-7 font-bold text-3xl">Đăng ký tư vấn</h1>
                 <div class="mt-6 grid grid-cols-12 gap-2">
-                    <form method="POST" action="?/register" use:enhance class="col-span-5 max-md:col-span-12">
+                    <form
+                        method="POST"
+                        action="?/register"
+                        use:enhance
+                        class="md:col-span-5 max-md:col-span-12 lg:col-span-7"
+                    >
                         <div>
                             <div
                                 class="bg-white py-3 px-4 text-gray-400 w-full flex items-center rounded-lg mt-5 {form
@@ -1199,7 +1204,7 @@
                     </form>
 
                     <div
-                        class="lg:col-span-6 md:col-span-7 max-md:hidden h-full items-center flex justify-center absolute right-0 top-[-50%] translate-y-[50%]"
+                        class="lg:col-span-5 md:col-span-7 max-md:hidden h-full items-center flex justify-center absolute right-0 top-[-50%] translate-y-[50%]"
                     >
                         <img class=" lg:w-full lg:h-[90%] md:w-full md:h-[75%]" src={imgResisters} alt="" />
                     </div>
