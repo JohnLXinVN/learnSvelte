@@ -24,7 +24,7 @@
 
             <div class="font-bold uppercase ">Về trang chủ</div>
         </a>
-        <h1 class="font-bold text-4xl mt-10 mb-20 max-md:pt-12">Blog</h1>
+        <h1 class="font-bold text-4xl mt-10 mb-20 max-md:pt-12">Giới thiệu</h1>
         <div class="font-semibold text-base max-w-screen-md mx-auto">
             <p>Here's our step-by-step guide to turning Black Friday weekend into a win.</p>
             <br />
